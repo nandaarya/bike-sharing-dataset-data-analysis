@@ -214,7 +214,6 @@ google-cloud-storage==2.14.0
 google-cloud-translate==3.12.1
 google-cloud-videointelligence==2.16.0
 google-cloud-vision==3.10.0
-google-colab @ file:///colabtools/dist/google_colab-1.0.0.tar.gz
 google-crc32c==1.6.0
 google-genai==0.2.2
 google-generativeai==0.8.3
