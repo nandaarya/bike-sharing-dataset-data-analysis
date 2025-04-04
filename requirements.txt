@@ -348,8 +348,6 @@ launchpadlib==1.10.16
 lazr.restfulclient==0.14.4
 lazr.uri==1.0.6
 lazy_loader==0.4
-pandas==2.2.3
-learntools @ git+https://github.com/Kaggle/learntools@010e3b5035354e15c073a0aca9e202c2e2beb742
 leven==1.0.4
 libclang==18.1.1
 libcudf-cu12==25.2.0
