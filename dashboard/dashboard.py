@@ -92,7 +92,7 @@ elif menu == "Jam":
 elif menu == "Bulan":
     st.subheader("Jumlah Penyewaan Sepeda Berdasarkan Bulan")
 
-    monthly_rentals = filtered_day_df.groupby("month")["total_rentals"].sum().sort_index()
+    monthly_rentals = filtered_day_df.groupby("month")["total_rentals"].sum()
 
     fig, ax = plt.subplots(figsize=(8, 3))
     bars = ax.bar(monthly_rentals.index.astype(str), monthly_rentals.values, color="lightblue")
