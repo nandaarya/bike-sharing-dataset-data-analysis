@@ -54,7 +54,8 @@ filtered_hour_df = hour_df[
 if menu == "Hari":
     st.subheader("Jumlah Penyewaan Sepeda Berdasarkan Hari")
     
-    day_rentals = filtered_day_df.groupby("day_of_week")["total_rentals"].sum()
+    day_order = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    day_rentals = filtered_day_df.groupby("day_of_week")["total_rentals"].sum().reindex(day_order)
 
     fig, ax = plt.subplots(figsize=(8, 3))
     bars = ax.bar(day_rentals.index, day_rentals.values, color="skyblue")
@@ -91,7 +92,7 @@ elif menu == "Jam":
 elif menu == "Bulan":
     st.subheader("Jumlah Penyewaan Sepeda Berdasarkan Bulan")
 
-    monthly_rentals = filtered_day_df.groupby("month")["total_rentals"].sum()
+    monthly_rentals = filtered_day_df.groupby("month")["total_rentals"].sum().reindex(range(1, 13))
 
     fig, ax = plt.subplots(figsize=(8, 3))
     bars = ax.bar(monthly_rentals.index.astype(str), monthly_rentals.values, color="lightblue")
