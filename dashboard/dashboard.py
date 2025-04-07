@@ -53,9 +53,8 @@ filtered_hour_df = hour_df[
 # Visualisasi berdasarkan pilihan menu
 if menu == "Hari":
     st.subheader("Jumlah Penyewaan Sepeda Berdasarkan Hari")
-
-    day_order = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    day_rentals = filtered_day_df.groupby("day_of_week")["total_rentals"].sum().reindex(day_order)
+    
+    day_rentals = filtered_day_df.groupby("day_of_week")["total_rentals"].sum()
 
     fig, ax = plt.subplots(figsize=(8, 3))
     bars = ax.bar(day_rentals.index, day_rentals.values, color="skyblue")
