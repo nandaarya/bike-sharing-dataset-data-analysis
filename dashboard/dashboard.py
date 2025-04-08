@@ -25,7 +25,7 @@ st.set_page_config(page_title="Dashboard Penyewaan Sepeda", layout="wide")
 st.header('🚲 Dashboard Data Penyewaan Sepeda')
 
 # Sidebar - Logo dan Navigasi
-st.sidebar.image("bike-logo.png")
+st.sidebar.image(os.path.join(base_path, "bike-logo.png"))
 menu = st.sidebar.selectbox("Pilih Data Analisis", ("Hari", "Jam", "Bulan", "Cuaca"))
 
 # Sidebar - Fitur Interaktif
