@@ -1,10 +1,13 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+
+base_path = os.path.dirname(__file__)
 
 # Load dataset
-day_df = pd.read_csv("day_clean.csv")
-hour_df = pd.read_csv("hour_clean.csv")
+day_df = pd.read_csv(os.path.join(base_path, "day_clean.csv"))
+hour_df = pd.read_csv(os.path.join(base_path, "hour_clean.csv"))
 
 # Pastikan kolom tanggal bertipe datetime
 day_df['dteday'] = pd.to_datetime(day_df['dteday'])
